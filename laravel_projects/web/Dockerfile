@@ -24,3 +24,5 @@ RUN docker-php-ext-install \
     rewrite 
 
 RUN apt-get update && apt-get install -y nodejs npm 
+
+RUN apt-get install -y python3

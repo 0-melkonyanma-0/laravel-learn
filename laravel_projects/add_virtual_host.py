@@ -39,8 +39,12 @@ def main():
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
             """
         )
-    os.system(f'a2ensite {web_site}.{domain}.conf')
-    os.system(f'service apache2 restart')
+
+    print(f'a2ensite {web_site}.{domain}.conf')
+
+
+    # os.system(f'a2ensite {web_site}.{domain}.conf')
+    # os.system(f'service apache2 restart')
 
 
 if __name__ == "__main__":

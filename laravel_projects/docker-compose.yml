@@ -10,7 +10,7 @@ services:
       - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
       - ${APACHE_CONFIG_PATH_HOST}:${APACHE_CONFIG_PATH_CONTAINER}
     ports:
-      - 8080:80
+      - 80:80
     working_dir: ${APP_PATH_CONTAINER}
     restart: always
   
