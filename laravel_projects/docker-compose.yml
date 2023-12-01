@@ -8,13 +8,17 @@ services:
       - APACHE_RUN_USER=#1000
     volumes:
       - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
+      - ${APACHE_CONFIG_PATH_HOST}:${APACHE_CONFIG_PATH_CONTAINER}
     ports:
       - 8080:80
     working_dir: ${APP_PATH_CONTAINER}
+    restart: always
   
   mysql: 
     image: mysql:latest
     restart: always
+    ports:
+          - "3306:3306"
     environment:
         MYSQL_ROOT_PASSWORD: 12345678
     volumes:

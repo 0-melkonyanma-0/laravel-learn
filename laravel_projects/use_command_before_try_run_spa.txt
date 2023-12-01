@@ -1,0 +1,4 @@
+cp -a <container:id>:from dest
+
+chown -R www-data:www-data /var/www
+/etc/init.d/apache2 start
